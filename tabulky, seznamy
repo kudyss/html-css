@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname">
+    </form>
+    
+    <table>
+       <tr>
+          <th>pondělí</th>
+          <th>úterý</th>
+          <th>středa</th>
+       </tr>
+       <tr>
+        <td>16:30-18:00</td>
+        <td>17:00-18:00</td>
+        <td>16:30-18:00</td>
+       </tr>
+    </table>
+
+    <h4>neuspořádaný</h4>
+    <ul>
+        <li>kečup</li>
+        <li>sýr</li>
+        <li>máslo</li>
+    </ul>
+
+    <h4>uspořádaný</h4>
+    <ol>
+        <li>budíček</li>
+        <li>snídaně</li>
+        <li>hygiena</li>
+    </ol>
+  </body>
+</html>
