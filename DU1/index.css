@@ -1,1 +1,10 @@
-
+body {
+  background: #6e28d9;
+  padding: 0 24px;
+  color: white; /* Change my color to yellow */
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
