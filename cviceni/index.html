@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University website design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">COURSES</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+<div class="text-box" >
+    <h1>World's biggest university</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua.</p>
+    <a href="" class="hero-btn">Visit Us to Know More</a>
+
+
+</div>      
+    </section>
+
+    <!--- course --->
+
+<section class="course">
+    <h1>Courses We Offer</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Intermediate</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="course-col">
+            <h3>Degree</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="course-col">
+            <h3>Post Graduation</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+
+</section>
+
+    <!--- campus --->
+
+<section class="campus">
+    <h1>Our Campus</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="images/campus-1.jpg">
+            <div class="layer">
+                <h3>Playground</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="images/campus-2.jpg">
+            <div class="layer">
+                <h3>Hostel Facility</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="images/campus-3.jpg">
+            <div class="layer">
+                <h3>Library</h3>
+            </div>
+        </div>  
+    </div>
+
+</section>
+
+
+
+    <!--- javascript for toggle menu --->
+ <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }   
+</script>
+</body>
+</html>
