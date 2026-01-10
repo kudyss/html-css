@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+   <header class="header">
+        <div>
+            <h1>Barber Shop XYZ</h1>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#o-nas">O nás</a></li>
+                <li><a href="#sluzby">Služby</a></li>
+                <li><a href="#provozni-doba">Provozní doba</a></li>
+                <li><a href="#rezervace">Objednání</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HLAVNÍ OBSAH -->
+    <main class="main">
+
+        <section class="hero">
+            <div class="content">
+                <h2>Objednejte se online</h2>
+                <p>
+                    Nabízíme profesionální pánské střihy, úpravu vousů
+                    a moderní barber služby bez čekání.
+                </p>
+                <button class="order-btn" onclick="location.href='rezervace.html'">Objednat se</button>
+            </div>
+        </section>
+
+        <section class="services" id="sluzby">
+            <h2>Naše služby</h2>
+            <ul>
+                <li>Klasický pánský střih</li>
+                <li>Úprava vousů a holení</li>
+                <li>Moderní fade střihy</li>
+                <li>Barvení vlasů a vousů</li>
+                <li>Speciální balíčky pro svatby a akce</li>
+            </ul>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Barber Shop XYZ</p>
+    </footer>
+</body>
+</html>
