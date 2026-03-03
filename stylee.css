@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.stred{
+    
+    font-size: 40px;
+    text-align: center;
+}
+
+header{
+    color: aliceblue;
+    text-align: right;
+}
+.navbar{
+   background-color: aquamarine;
+}
+aside{
+    background-color: red;
+}
+section{
+    width: 100%;
+    float: left;
+
+}
+article{
+    width: 40%;
+    float: left;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+h2{
+    margin: 10px;
+    border: 2px solid black;
+    height: auto;
+    padding-top: 10px;
+    position: absolute;
+    width: 100%;
+}
+
+
+h4{
+    text-align: right;
+    
+}
