@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Výpočty s tlačítkem</title>
+</head>
+<body>
+
+    <h3>Výpočet kruhu</h3>
+    <p>
+        Poloměr (r): 
+        <input type="number" id="r">
+    </p>
+    <p>
+        <button onclick="vypocetKruhu()">Spočítat</button>
+    </p>
+    <p>
+        Obvod: 
+        <input type="text" id="kruhObvod" readonly>
+    </p>
+    <p>
+        Obsah: 
+        <input type="text" id="kruhObsah" readonly>
+    </p>
+
+
+    <h3>Výpočet obdélníku</h3>
+    <p>
+        Strana a: 
+        <input type="number" id="a">
+    </p>
+    <p>
+        Strana b: 
+        <input type="number" id="b">
+    </p>
+    <p>
+        <button onclick="vypocetObdelniku()">Spočítat </button>
+    </p>
+    <p>
+        Obvod: 
+        <input type="text" id="obdelnikObvod" readonly>
+    </p>
+    <p>
+        Obsah: 
+        <input type="text" id="obdelnikObsah" readonly>
+    </p>
+
+    <script>
+        function vypocetKruhu() {
+            const r = parseFloat(document.getElementById('r').value);
+            
+            if (r > 0) {
+                document.getElementById('kruhObvod').value = (2 * Math.PI * r).toFixed(2);
+                document.getElementById('kruhObsah').value = (Math.PI * r * r).toFixed(2);
+            } else {
+                alert("Zadej prosím kladné číslo pro poloměr.");
+            }
+        }
+
+        function vypocetObdelniku() {
+            const a = parseFloat(document.getElementById('a').value);
+            const b = parseFloat(document.getElementById('b').value);
+
+            if (a > 0 && b > 0) {
+                document.getElementById('obdelnikObvod').value = (2 * (a + b)).toFixed(2);
+                document.getElementById('obdelnikObsah').value = (a * b).toFixed(2);
+            } else {
+                alert("Zadej prosím kladná čísla pro obě strany.");
+            }
+        }
+    </script>
+
+</body>
+</html>
