@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Jednoduchá kalkulačka s tlačítky</title>
+</head>
+<body>
+
+    <h3>Kalkulačka</h3>
+
+    První číslo:<br>
+    <input type="text" id="c1" onclick="aktivniPole = 'c1'"><br><br>
+
+    Znaménko (+, -, *, /):<br>
+    <input type="text" id="znamenko" style="width: 30px;"><br><br>
+
+    Druhé číslo:<br>
+    <input type="text" id="c2" onclick="aktivniPole = 'c2'"><br><br>
+
+    Tlačítka s čísly:<br>
+    <button onclick="pridat('1')">1</button>
+    <button onclick="pridat('2')">2</button>
+    <button onclick="pridat('3')">3</button><br>
+    <button onclick="pridat('4')">4</button>
+    <button onclick="pridat('5')">5</button>
+    <button onclick="pridat('6')">6</button><br>
+    <button onclick="pridat('7')">7</button>
+    <button onclick="pridat('8')">8</button>
+    <button onclick="pridat('9')">9</button><br>
+    <button onclick="pridat('0')">0</button>
+    <button onclick="pridat('.')">.</button><br><br>
+
+    <button onclick="spocitat()">= Rovná se</button>
+    <button onclick="reset()">Reset</button><br><br>
+
+    Výsledek: <span id="vysledek"></span>
+
+    <script>
+        let aktivniPole = 'c1'; 
+
+        function pridat(hodnota) {
+            let pole = document.getElementById(aktivniPole);
+            pole.value += hodnota;
+        }
+
+        function spocitat() {
+            let cislo1 = parseFloat(document.getElementById('c1').value);
+            let cislo2 = parseFloat(document.getElementById('c2').value);
+            let op = document.getElementById('znamenko').value;
+            let vysl = document.getElementById('vysledek');
+
+            if (isNaN(cislo1) || isNaN(cislo2)) {
+                vysl.innerText = "Chyba: Zadej čísla";
+                return;
+            }
+
+            if (op === '+') {
+                vysl.innerText = cislo1 + cislo2;
+            } else if (op === '-') {
+                vysl.innerText = cislo1 - cislo2;
+            } else if (op === '*') {
+                vysl.innerText = cislo1 * cislo2;
+            } else if (op === '/') {
+                if (cislo2 === 0) {
+                    vysl.innerText = "Nelze dělit nulou";
+                } else {
+                    vysl.innerText = cislo1 / cislo2;
+                }
+            } else {
+                vysl.innerText = "Neznámé znaménko";
+            }
+        }
+
+        function reset() {
+            document.getElementById('c1').value = "";
+            document.getElementById('c2').value = "";
+            document.getElementById('znamenko').value = "";
+            document.getElementById('vysledek').innerText = "";
+            aktivniPole = 'c1';
+        }
+    </script>
+
+</body>
+</html>
