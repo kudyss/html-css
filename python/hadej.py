@@ -8,33 +8,35 @@ print("zadej 4 pro vlastni rozsah")
 a = int(input("vyber moznost: "))
 
 if a == 1:
-    min, max = 1, 10
+    dolni, horni = 1, 10
 elif a == 2:
-    min, max = 1, 50
+    dolni, horni = 1, 50
 elif a == 3:
-    min, max = 1, 100
+    dolni, horni = 1, 100
 elif a == 4:
-    min = int(input("zadej spodni hranici: "))
-    max = int(input("Zadej vrchni hranici: "))
+    dolni = int(input("zadej spodni hranici: "))
+    horni = int(input("Zadej vrchni hranici: "))
 else:
     print("neplatna volba!")
     exit()
 
-print(f"mysli si cislo mezi {min} a {max}")
+if dolni > horni:
+    print("spodni hranice nesmi byt vetsi nez vrchni!")
+    exit()
+
+ran_cislo = random.randint(dolni, horni)
+pokusy = 0
+
+print(f"pocitac si mysli cislo mezi {dolni} a {horni}. Hadej!")
 
 while True:
-    ran = random.randint(min, max)
-    print(f"pocitac hada: {ran}")
-    b = input("je cislo vetsi? (ano/ne): ").lower()
+    tip = int(input("tvuj tip: "))
+    pokusy += 1
 
-    if b == "ano":
-        min = ran + 1
-    elif b == "ne":
-        max = ran
+    if tip < ran_cislo:
+        print(f"tajne cislo je vetsi. (pokus c. {pokusy})")
+    elif tip > ran_cislo:
+        print(f"tajne cislo je mensi. (pokus c. {pokusy})")
     else:
-        print("neplatna odpoved, zadej 'ano' nebo 'ne'.")
-        continue
-
-    if min == max:
-        print(f"pocitac uhodl cislo: {min}!")
+        print(f" uhodl jsi cislo {ran_cislo} na {pokusy}. pokus.")
         break
